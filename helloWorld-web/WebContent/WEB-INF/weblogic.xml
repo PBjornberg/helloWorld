@@ -33,5 +33,5 @@
 		<local-path>@SAMPLES_HOME/server/examples/build</local-path>
 		<url-pattern>images/*</url-pattern>
 	</virtual-directory-mapping>
-    <context-root>helloWorld-web</context-root>
+    <context-root>helloWorld-war</context-root>
 </weblogic-web-app>

@@ -9,10 +9,4 @@
             <context-root>helloWorld-web</context-root>
         </web>
     </module>
-    <module>
-        <web>
-            <web-uri>helloWorld-ws-1.0.war</web-uri>
-            <context-root>helloWorld-ws</context-root>
-        </web>
-    </module>
 </application>

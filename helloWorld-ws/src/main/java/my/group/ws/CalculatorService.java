@@ -17,7 +17,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "CalculatorService", targetNamespace = "http://localhost/wsdl", wsdlLocation = "file:/K:/git/ejb-test/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl")
+@WebServiceClient(name = "CalculatorService", targetNamespace = "http://localhost/wsdl", wsdlLocation = "file:/C:/Users/Peter/git/helloWorld/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl")
 public class CalculatorService
     extends Service
 {
@@ -30,9 +30,9 @@ public class CalculatorService
         try {
             URL baseUrl;
             baseUrl = my.group.ws.CalculatorService.class.getResource(".");
-            url = new URL(baseUrl, "file:/K:/git/ejb-test/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl");
+            url = new URL(baseUrl, "file:/C:/Users/Peter/git/helloWorld/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl");
         } catch (MalformedURLException e) {
-            logger.warning("Failed to create URL for the wsdl Location: 'file:/K:/git/ejb-test/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl', retrying as a local file");
+            logger.warning("Failed to create URL for the wsdl Location: 'file:/C:/Users/Peter/git/helloWorld/helloWorld-ws/src/main/resources/META-INF/wsdl/calculator.wsdl', retrying as a local file");
             logger.warning(e.getMessage());
         }
         CALCULATORSERVICE_WSDL_LOCATION = url;

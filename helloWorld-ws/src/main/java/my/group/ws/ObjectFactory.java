@@ -37,6 +37,22 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Multiply }
+     * 
+     */
+    public Multiply createMultiply() {
+        return new Multiply();
+    }
+
+    /**
+     * Create an instance of {@link SumResponse }
+     * 
+     */
+    public SumResponse createSumResponse() {
+        return new SumResponse();
+    }
+
+    /**
      * Create an instance of {@link MultiplyResponse }
      * 
      */
@@ -50,22 +66,6 @@ public class ObjectFactory {
      */
     public Sum createSum() {
         return new Sum();
-    }
-
-    /**
-     * Create an instance of {@link SumResponse }
-     * 
-     */
-    public SumResponse createSumResponse() {
-        return new SumResponse();
-    }
-
-    /**
-     * Create an instance of {@link Multiply }
-     * 
-     */
-    public Multiply createMultiply() {
-        return new Multiply();
     }
 
     /**

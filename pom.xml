@@ -15,13 +15,18 @@
 	<url>${site.base.url}/helloworld</url>
 
 	<properties>
-		<scm.repository.base.url>https://nc1161.rsvc.se/gitblit</scm.repository.base.url>
-		<scm.repository.manager.base.url>https://nc1161.rsvc.se/gitblit</scm.repository.manager.base.url>
-		<site.upload.base.url>http://nc1161.rsvc.se/sites</site.upload.base.url>
+		<scm.repository.base.url>https://nc1161.rsvc.se/gitblit
+		</scm.repository.base.url>
+		<scm.repository.manager.base.url>https://nc1161.rsvc.se/gitblit
+		</scm.repository.manager.base.url>
+		<site.upload.base.url>http://nc1161.rsvc.se/sites
+		</site.upload.base.url>
 		<maven-site-plugin.skip>false</maven-site-plugin.skip>
 		<main.basedir>${session.executionRootDirectory}</main.basedir>
-		<maven-site-plugin.staging-directory>${session.executionRootDirectory}/target/staging/helloworld</maven-site-plugin.staging-directory>
-		<maven.repository.base.url>http://nc1161.rsvc.se/nexus/content/repositories</maven.repository.base.url>
+		<maven-site-plugin.staging-directory>${session.executionRootDirectory}/target/staging/helloworld
+		</maven-site-plugin.staging-directory>
+		<maven.repository.base.url>http://nc1161.rsvc.se/nexus/content/repositories
+		</maven.repository.base.url>
 		<wlsHome>c:/</wlsHome>
 	</properties>
 
@@ -34,10 +39,10 @@
 
 	<dependencyManagement>
 		<dependencies>
-			<!--Applikationsartifaktersomm�stevarak�ndap�systemniv� -->
+			<!--Applikationsartifakter som måste vara kända på systemnivå -->
 			<dependency>
 				<groupId>my.group</groupId>
-				<artifactId>helloWorld</artifactId>
+				<artifactId>helloWorld-ear</artifactId>
 				<version>1.0</version>
 				<type>ear</type>
 			</dependency>
@@ -249,7 +254,8 @@
 					<executions>
 						<execution>
 							<configuration>
-								<source>${project.build.directory}/${project.artifactId}-${project.version}.jar</source>
+								<source>${project.build.directory}/${project.artifactId}-${project.version}.jar
+								</source>
 								<verbose>true</verbose>
 							</configuration>
 							<phase>${appcPhase}</phase>
@@ -292,7 +298,8 @@
 					<configuration>
 						<skip>${maven-site-plugin.skip}</skip>
 						<skipDeploy>${maven-site-plugin.skip}</skipDeploy>
-						<stagingDirectory>${maven-site-plugin.staging-directory}</stagingDirectory>
+						<stagingDirectory>${maven-site-plugin.staging-directory}
+						</stagingDirectory>
 						<locales>sv</locales>
 					</configuration>
 					<dependencies>
@@ -307,6 +314,10 @@
 							<version>2.0.0</version>
 						</dependency>
 					</dependencies>
+				</plugin>
+				<plugin>
+					<artifactId>maven-project-info-reports-plugin</artifactId>
+					<version>2.8</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -403,7 +414,8 @@
 	<scm>
 		<url>${scm.repository.manager.base.url}/helloworld.git</url>
 		<connection>scm:${scm.repository.base.url}/helloworld.git</connection>
-		<developerConnection>scm:${scm.repository.base.url}/helloworld.git</developerConnection>
+		<developerConnection>scm:${scm.repository.base.url}/helloworld.git
+		</developerConnection>
 	</scm>
 
 	<repositories>
