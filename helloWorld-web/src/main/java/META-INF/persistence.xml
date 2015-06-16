@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0">
+	<persistence-unit name="HelloWorld">
+		<jta-data-source>jdbc/ds</jta-data-source>
+		<class>my.group.entity.Productline</class>
+		<class>my.group.entity.Office</class>
+		<class>my.group.entity.Orderdetail</class>
+		<class>my.group.entity.Employee</class>
+		<class>my.group.entity.Payment</class>
+		<class>my.group.entity.Purchaseorder</class>
+		<class>my.group.entity.Product</class>
+		<class>my.group.entity.Customer</class>
+		<class>my.group.entity.PaymentId</class>
+		<class>my.group.entity.OrderdetailId</class>
+	</persistence-unit>
+</persistence>

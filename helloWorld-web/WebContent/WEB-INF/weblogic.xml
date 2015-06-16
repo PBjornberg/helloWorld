@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app">
+
+	<!-- Must define the library reference to jsf, otherwise jsf will not available 
+		in you webapp. -->
+	<library-ref>
+		<library-name>jsf</library-name>
+		<specification-version>2.0</specification-version>
+		<implementation-version>1.0.0.0_2-0-2</implementation-version>
+	</library-ref>
+
+
+	<container-descriptor>
+		<prefer-web-inf-classes>true</prefer-web-inf-classes>
+	</container-descriptor>
+	<!-- Resource defination for the DataSouce used in the example. > <resource-description> 
+		<res-ref-name>jdbc/demoDataSource</res-ref-name> <jndi-name>examples-dataSource-demoPool</jndi-name> 
+		</resource-description -->
+
+	<!-- Use the virtual-directory-mapping element to specify document roots 
+		other than the default document root of the Web application for certain kinds 
+		of requests, such as image requests. All images for a set of Web applications 
+		can be stored in a single location, and need not be copied to the document 
+		root of each Web application that uses them. For an incoming request, if 
+		a virtual directory has been specified servlet container will search for 
+		the requested resource first in the virtual directory and then in the Web 
+		application's original document root. -->
+	<virtual-directory-mapping>
+		<local-path>@SAMPLES_HOME/server/</local-path>
+		<url-pattern>/examples/*</url-pattern>
+	</virtual-directory-mapping>
+	<virtual-directory-mapping>
+		<local-path>@SAMPLES_HOME/server/examples/build</local-path>
+		<url-pattern>images/*</url-pattern>
+	</virtual-directory-mapping>
+    <context-root>helloWorld-web</context-root>
+</weblogic-web-app>
