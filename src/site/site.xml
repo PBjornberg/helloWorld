@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Regina">
+    <skin>
+        <groupId>org.apache.maven.skins</groupId>
+        <artifactId>maven-fluido-skin</artifactId>
+        <version>1.4</version>
+    </skin>
+    <publishDate format="yyyy-MM-dd HH:mm" />
+    <version position="right" />
+    <body>
+        <menu>
+            <item name=" " href="index.html"/>
+        </menu>
+
+        <menu name="Metrics och Javadoc">
+            <item name="Javadoc" href="xref/index.html" />
+            <item name="PMD" href="PMD.html" />
+        </menu>
+    </body>
+</project> 
