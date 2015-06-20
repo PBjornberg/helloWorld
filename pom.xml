@@ -15,6 +15,7 @@
 	<url>${site.base.url}/helloworld</url>
 
 	<properties>
+		<wlsHome>C:/Apps/Oracle/wls1036_dev/wlserver</wlsHome>
 		<scm.repository.base.url>https://nc1161.rsvc.se/gitblit
 		</scm.repository.base.url>
 		<scm.repository.manager.base.url>https://nc1161.rsvc.se/gitblit
@@ -27,7 +28,6 @@
 		</maven-site-plugin.staging-directory>
 		<maven.repository.base.url>http://nc1161.rsvc.se/nexus/content/repositories
 		</maven.repository.base.url>
-		<wlsHome>c:/</wlsHome>
 	</properties>
 
 	<modules>
@@ -251,6 +251,13 @@
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>weblogic-maven-plugin</artifactId>
 					<version>2.9.5</version>
+					<configuration>
+						<adminurl>http://localhost:7001</adminurl>
+						<user>weblogic</user>
+						<password>welcome1</password>
+						<upload>true</upload>
+						<targets>AdminServer</targets>
+					</configuration>
 					<executions>
 						<execution>
 							<configuration>
@@ -258,9 +265,9 @@
 								</source>
 								<verbose>true</verbose>
 							</configuration>
-							<phase>${appcPhase}</phase>
+							<phase>install</phase>
 							<goals>
-								<goal>appc</goal>
+								<goal>deploy</goal>
 							</goals>
 						</execution>
 					</executions>
